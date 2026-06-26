@@ -1,0 +1,12 @@
+{
+  "name": "hello-hono",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.0.6",
+    "hono": "^4"
+  }
+}
