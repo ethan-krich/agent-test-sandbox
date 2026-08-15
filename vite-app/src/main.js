@@ -16,6 +16,8 @@ document.querySelector('#app').innerHTML = `
     <p>Edit <code>src/main.js</code> and save to test <code>HMR</code></p>
   </div>
   <button id="counter" type="button" class="counter"></button>
+  <button id="joke" type="button" class="counter">Random joke</button>
+  <p id="joke-output"></p>
 </section>
 
 <div class="ticks"></div>
@@ -58,3 +60,18 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+const jokeBtn = document.querySelector('#joke')
+const jokeOutput = document.querySelector('#joke-output')
+
+jokeBtn.addEventListener('click', async () => {
+  jokeOutput.textContent = 'Loading...'
+  try {
+    const res = await fetch('/api/joke')
+    if (!res.ok) throw new Error(res.status)
+    const data = await res.json()
+    jokeOutput.textContent = data.joke
+  } catch {
+    jokeOutput.textContent = 'Failed to load a joke. Try again.'
+  }
+})
