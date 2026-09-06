@@ -1,0 +1,6 @@
+{
+  "runScripts": {
+    "run": { "command": ["top"] },
+    "dev": { "command": ["top"], "icon": "lucide:smartphone" }
+  }
+}

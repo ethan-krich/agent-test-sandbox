@@ -1,0 +1,6 @@
+{
+  "cwd": "vite-app",
+  "setup": ["npm install", "cp \"$SUPERSET_ROOT_PATH/.env\" .env || true"],
+  "run": ["npm run dev"],
+  "teardown": ["rm -rf node_modules/.vite"]
+}
