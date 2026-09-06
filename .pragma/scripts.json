@@ -1,6 +1,16 @@
 {
+  "setup": [
+    "cd vite-app && npm install",
+    "cd vite-app && cp \"$PRAGMA_PROJECT_PATH/.env\" .env || true"
+  ],
   "runScripts": {
-    "run": { "command": ["top"] },
-    "dev": { "command": ["top"], "icon": "lucide:smartphone" }
-  }
+    "run": {
+      "command": [
+        "cd vite-app && npm run dev"
+      ]
+    }
+  },
+  "teardown": [
+    "cd vite-app && rm -rf node_modules/.vite"
+  ]
 }
