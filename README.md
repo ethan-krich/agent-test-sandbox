@@ -1,3 +1,3 @@
-Hello from main branch Main branch edit
+Hello from main — the shared sandbox for agent testing
 
 # Testing another pr
