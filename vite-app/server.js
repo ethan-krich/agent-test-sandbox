@@ -6,6 +6,7 @@ const app = new Hono()
 
 app.get('/hello', (c) => c.text('Hello World!'))
 app.get('/health', (c) => c.text('ok'))
+app.get('/version', (c) => c.json({ version: '0.0.0' }))
 
 const vite = await (async () => {
   const { createServer } = await import('vite')
