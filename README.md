@@ -1,3 +1,3 @@
-Hello from main branch Main branch edit
+A sandbox repo for testing agents
 
 # Testing another pr
