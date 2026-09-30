@@ -21,4 +21,4 @@ const server = createServer((req, res) => {
   vite.middlewares(req, res, () => listener(req, res))
 })
 
-server.listen(5173)
+server.listen(Number(process.env.PORT ?? 5173))
