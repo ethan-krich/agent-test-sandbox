@@ -7,5 +7,6 @@ export function setupCounter(element) {
     element.innerHTML = `Count is ${counter}`
   }
   element.addEventListener('click', () => setCounter(Math.min(counter + 1, MAX_COUNT)))
+  element.addEventListener('dblclick', () => setCounter(0))
   setCounter(0)
 }
