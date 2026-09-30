@@ -5,6 +5,7 @@ import { getRequestListener } from '@hono/node-server'
 const app = new Hono()
 
 app.get('/hello', (c) => c.text('Hello World!'))
+app.get('/health', (c) => c.text('ok'))
 
 const vite = await (async () => {
   const { createServer } = await import('vite')
