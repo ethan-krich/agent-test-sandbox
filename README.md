@@ -1,3 +1,3 @@
-Sandbox repository for agent tests
+A sandbox repo for testing agents
 
 # Testing another pr
